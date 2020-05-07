@@ -6,3 +6,4 @@ WORKDIR /var/www/html
 RUN composer install --ignore-platform-reqs --no-interaction --no-plugins --no-scripts --prefer-dist
 RUN a2enmod rewrite
 RUN service apache2 restart
+RUN chmod -R 777 storage
